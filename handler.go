@@ -58,6 +58,7 @@ func (wh *websocketHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 			userID = uID
+			conn.Write([]byte("pong"))
 		}
 
 		// bind
